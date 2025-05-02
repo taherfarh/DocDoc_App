@@ -1,3 +1,5 @@
+import 'package:advanced_project/core/helpers/exetinsion.dart';
+import 'package:advanced_project/core/routing/routes.dart';
 import 'package:advanced_project/core/theming/textstyle.dart';
 import 'package:advanced_project/core/widgets/DocLogoAndName/DocLogoAndName.dart';
 import 'package:advanced_project/core/widgets/DoctorImageAndText.dart';
@@ -39,10 +41,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 30.h,),
+                SizedBox(height: 30.h),
 
-                Getstartedbutton()
-
+                Getstartedbutton(textbutton: 'Get Started', onpressed: () { context.pushnamed(Routes.LoginScreen); },),
               ],
             ),
           ),

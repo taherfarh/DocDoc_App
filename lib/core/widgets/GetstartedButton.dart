@@ -4,7 +4,9 @@ import 'package:advanced_project/core/theming/textstyle.dart';
 import 'package:flutter/material.dart';
 
 class Getstartedbutton extends StatelessWidget {
-  const Getstartedbutton({super.key});
+  final String textbutton;
+  final VoidCallback onpressed;
+  const Getstartedbutton({super.key, required this.textbutton, required this.onpressed});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +20,10 @@ class Getstartedbutton extends StatelessWidget {
         ),
       ),
 
-      onPressed: () {
-        context.pushnamed(Routes.LoginScreen);
-      },
-      child: Text("Get Started", style: Textstyles.font16WhiteSemiBold),
+      onPressed: onpressed ,
+        
+      
+      child: Text(textbutton, style: Textstyles.font16WhiteSemiBold),
     );
   }
 }

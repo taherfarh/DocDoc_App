@@ -1,3 +1,4 @@
+import 'package:advanced_project/core/helpers/constans.dart';
 import 'package:advanced_project/core/routing/app_router.dart';
 import 'package:advanced_project/core/routing/routes.dart';
 import 'package:advanced_project/core/theming/colors.dart';
@@ -23,7 +24,7 @@ class DocApp extends StatelessWidget {
 
         debugShowCheckedModeBanner: false,
 
-        initialRoute: Routes.OnboardingScreen,
+         initialRoute: isLoggedInUser ? Routes.HomeScreen : Routes.LoginScreen,
 
         onGenerateRoute: appRouter.generateRoute,
       ),
